@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The Science of Growing Customers — Curriculum · Daniel Priestley</title>
+<meta name="description" content="Full curriculum and session scripts for The Science of Growing Customers: the two-evening live accelerator with Daniel Priestley, recorded at Mindvalley University, Estonia."/>
+<style>
+:root{
+ --brand:#1832B4;--brand-bright:#3D63F5;--brand-content:#1429A0;--brand-dark:#0F1F7A;
+ --brand-light:#EEF2FF;--brand-border:#D6DEFF;--green:#159F65;--orange:#ED6325;
+ --orange-content:#C9541F;--orange-light:#FFF4E9;--pink:#DF1A6F;--blue-dark:#1832B4;
+ --grey-100:#F9F9F9;--grey-200:#F3F4F6;--grey-300:#CED1D7;--grey-400:#979CA5;
+ --grey-500:#595E67;--grey-600:#292D38;--ink:#0F131A;
+ --bg:#fff;--bg-muted:#F9F9F9;--bg-subtle:#F3F4F6;--surface:#fff;
+ --text:#0F131A;--text-muted:#595E67;--text-subtle:#71767F;--border:#DFE1E5;
+ --border-strong:#CED1D7;--focus-ring:#3D63F5;--dark-bg:#0F131A;
+ --shadow-light:0 4px 15px 0 rgba(0,0,0,.05);--shadow-medium:0 5px 20px 0 rgba(0,0,0,.10);
+ --shadow-strong:0 15px 30px 0 rgba(0,0,0,.20);--shadow-focus:0 0 0 4px rgba(61,99,245,.35);
+ --sunset:linear-gradient(135deg,#0F1F7A 0%,#1832B4 100%);
+ --dusk:linear-gradient(135deg,#0F1F7A 0%,#1429A0 55%,#3D63F5 100%);
+ --container:1200px;--ease:cubic-bezier(0.2,0,0,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Google Sans","Google Sans Text",sans-serif;color:var(--text);background:var(--bg);
+ font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+.overline{font-size:14px;font-weight:700;letter-spacing:.08em;line-height:1;text-transform:uppercase;color:var(--brand-content)}
+.overline.on-dark{color:var(--brand-bright)}
+h1{font-size:84px;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:48px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
+.body-lg{font-size:22px;line-height:1.6;color:var(--text-muted)}
+.body-md{font-size:16px;line-height:1.5;color:var(--text-muted)}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:128px;padding:6px 12px;
+ font-size:12px;font-weight:500;background:var(--brand-light);color:var(--brand-content)}
+.icon{width:24px;height:24px;flex:0 0 24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.topbar{position:sticky;top:0;z-index:50;height:64px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.wordmark{font-size:20px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.wordmark span{color:var(--brand)}
+.brand{display:flex;align-items:center}
+.logo{height:26px;width:auto;display:block}
+@media (max-width:768px){.logo{height:22px}}
+.nav{display:flex;gap:28px}
+.nav a{color:var(--text-muted);font-size:14px;font-weight:500}
+.nav a:hover{color:var(--text)}
+section{padding:88px 0}
+.section-head{max-width:820px;margin-bottom:40px}
+.section-head .overline{display:block;margin-bottom:16px}
+.section-head p{margin-top:16px}
+.hero{background:var(--dark-bg);color:#fff;position:relative;overflow:hidden;padding:104px 0}
+.hero::before{content:"";position:absolute;inset:0;background:var(--dusk);opacity:.94}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 28%,rgba(255,255,255,.16),transparent 46%)}
+.hero .wrap{position:relative;z-index:2;max-width:900px}
+.hero h1{margin:18px 0}
+.hero .lede{font-size:22px;line-height:1.6;color:rgba(255,255,255,.92);max-width:660px}
+.prepared{margin-top:20px;font-size:14px;color:rgba(255,255,255,.75)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:32px;color:rgba(255,255,255,.92);font-size:16px;font-weight:500}
+.hero-meta div{display:flex;align-items:center;gap:8px}
+.thesis{background:var(--brand-light)}
+.thesis h2{max-width:920px}.thesis .accent{color:var(--brand)}
+.struct{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:8px;max-width:820px}
+.struct .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px}
+.struct .when{color:var(--brand-content);font-weight:500;font-size:14px;margin-bottom:8px;display:block}
+.struct h3{font-size:22px;font-weight:500;margin-bottom:6px}
+.module{border-top:1px solid var(--border)}
+.module .day-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.module .when{color:var(--text-muted);font-size:16px;font-weight:500}
+.outline{margin:24px 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px;max-width:760px}
+.outline li{position:relative;padding-left:22px;color:var(--text-muted);font-size:15px}
+.outline li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:128px;background:var(--brand-bright)}
+.chapters{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.chapter{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-light);transition:box-shadow 200ms var(--ease)}
+.chapter[open]{box-shadow:var(--shadow-strong)}
+.chapter-q{cursor:pointer;list-style:none;background-image:var(--dusk);color:#fff;
+ padding:18px 22px;display:flex;align-items:center;gap:16px;transition:filter 200ms var(--ease)}
+.chapter-q::-webkit-details-marker{display:none}
+.chapter-q:hover{filter:brightness(1.09)}
+.chapter-toggle{flex:0 0 38px;width:38px;height:38px;border-radius:128px;background:rgba(255,255,255,.18);
+ display:flex;align-items:center;justify-content:center;transition:transform 200ms var(--ease),background 200ms var(--ease)}
+.chapter-toggle .icon{stroke:#fff;width:22px;height:22px;stroke-width:2.5}
+.chapter[open] .chapter-toggle{transform:rotate(180deg);background:rgba(255,255,255,.30)}
+.chapter-text{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.chapter-title{font-size:18px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.chapter-point{font-size:14px;font-weight:400;line-height:1.4;color:rgba(255,255,255,.85)}
+.chapter-hint{flex:0 0 auto;font-size:13px;font-weight:500;color:#fff;white-space:nowrap;
+ background:rgba(255,255,255,.16);padding:7px 14px;border-radius:128px}
+.h-open{display:none}
+.chapter[open] .chapter-hint .h-closed{display:none}
+.chapter[open] .chapter-hint .h-open{display:inline}
+.chapter-a{padding:24px 24px 28px;background:#fff}
+@media (max-width:768px){.chapter-hint{display:none}.chapter-title{font-size:16px}}
+.tools{display:flex;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-size:14px;font-weight:500;
+ border-radius:128px;padding:12px 22px;background:#fff;color:var(--text);border:1px solid var(--border-strong);transition:all 200ms var(--ease)}
+.btn:hover{background:var(--bg-subtle)}
+.btn:focus-visible{outline:0;box-shadow:var(--shadow-focus)}
+/* Script content */
+.script{font-size:16px;line-height:1.6;color:var(--text)}
+.script p{margin:0 0 14px}
+.script .line{color:var(--text)}
+.script .spk{font-weight:700;color:var(--brand-content);margin-right:4px}
+.script h3.s-part{font-size:20px;font-weight:700;letter-spacing:-.01em;color:var(--ink);
+ margin:28px 0 14px;padding-top:20px;border-top:2px solid var(--brand-border)}
+.script h4.s-sub{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-content);margin:22px 0 12px}
+.script hr{border:0;border-top:1px solid var(--border);margin:20px 0}
+.script ul{margin:0 0 14px;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.script li{line-height:1.5}
+.script strong{font-weight:700}
+.cue{border-radius:12px;padding:12px 16px 12px 14px;margin:0 0 14px;font-size:14px;line-height:1.5}
+.cue-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-right:8px;
+ padding:2px 8px;border-radius:128px;vertical-align:1px}
+.cue-slide{background:var(--bg-subtle);color:var(--grey-500);border-left:3px solid var(--grey-300)}
+.cue-slide .cue-tag{background:var(--grey-200);color:var(--grey-600)}
+.cue-facil{background:var(--orange-light);color:var(--orange-content);border-left:3px solid var(--orange)}
+.cue-facil .cue-tag{background:#fff;color:var(--orange-content)}
+.cue-exercise{background:var(--brand-light);color:var(--brand-content);border-left:3px solid var(--brand-bright)}
+.cue-exercise .cue-tag{background:#fff;color:var(--brand-content)}
+.stories-note{font-size:14px;color:var(--text-subtle);margin-top:8px}
+.stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.story{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow-light)}
+.story-tags{display:flex;flex-wrap:wrap;gap:8px}
+.story-tag{display:inline-flex;align-items:center;gap:5px;border-radius:128px;padding:5px 11px;font-size:12px;font-weight:500;background:var(--bg-subtle);color:var(--grey-600)}
+.story-tag.daniel{background:var(--brand-light);color:var(--brand-content)}
+.story blockquote{margin:0;font-size:20px;line-height:1.35;font-weight:500;color:var(--ink)}
+.story-ctx{margin:0;font-size:14px;line-height:1.5;color:var(--text-muted)}
+.story figcaption{margin-top:auto;border-top:1px solid var(--border);padding-top:14px}
+.story-name{display:block;font-weight:500;color:var(--text);font-size:15px}
+.story-meta{font-size:13px;color:var(--text-subtle)}
+.sources{font-size:14px;line-height:1.6;color:var(--text-muted);max-width:820px}
+.sources li{margin-bottom:8px}
+footer{background:var(--ink);color:#B3B8C1;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer .wordmark{color:#fff;font-size:18px}
+@media (max-width:768px){
+ section{padding:56px 0}.hero{padding:72px 0}
+ h1{font-size:44px}h2{font-size:30px}.hero .lede,.body-lg{font-size:18px}
+ .struct,.outline,.stories-grid{grid-template-columns:1fr}.nav{display:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+ <a href="#overview" class="brand"><img src="mv-wordmark.svg" alt="Mindvalley" class="logo"></a>
+ <nav class="nav">
+   <a href="#overview">Overview</a>
+   <a href="#day1">Day one</a><a href="#day2">Day two</a><a href="#stories">Proof</a>
+ </nav>
+ <span class="badge">Curriculum</span>
+</div></header>
+
+<section class="hero">
+ <div class="wrap">
+   <span class="overline on-dark">Accelerator · Exponential Entrepreneur pathway</span>
+   <h1>The Science of Growing Customers</h1>
+   <p class="lede">The full curriculum and session scripts for the two-evening live accelerator with Daniel Priestley — recorded at Mindvalley University. How to position yourself, manufacture demand, and build a business that grows customers on purpose.</p>
+   <div class="hero-meta">
+     <div><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>18 &amp; 19 July · 5–9pm</div>
+     <div><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>8 hours live across two evenings</div>
+     <div><svg class="icon" viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Recorded live on stage</div>
+     <div><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 0114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>Mindvalley University, Estonia</div>
+   </div>
+   <p class="prepared">Prepared by Gareth Winter, Mindvalley Creative Director &amp; Head of Content — for Daniel Priestley.</p>
+ </div>
+</section>
+
+<section class="thesis" id="overview">
+ <div class="wrap">
+   <div class="section-head">
+     <span class="overline">The through-line</span>
+     <h2>You don't have a product problem. You have a <span class="accent">demand</span> problem.</h2>
+     <p class="body-lg">The single idea that runs through everything Daniel teaches: <strong>only oversubscribed businesses make a profit.</strong> Profit is not a reward for working hard — it is what happens when demand outstrips supply. Most founders are <em>supply-side</em>: they build, then hope. The science of growing customers is becoming <em>demand-side</em> — manufacturing buyers first, then delivering value with AI doing the heavy lifting.</p>
+     <p class="body-lg">Two evenings, one arc: <strong>Day one makes you the person they choose</strong> (positioning, intellectual capital, Key Person of Influence). <strong>Day two makes you oversubscribed</strong> (the demand engine, the repeatable week, the AI workforce, a 12-month plan they leave holding).</p>
+   </div>
+   <div class="struct">
+     <div class="card"><span class="when">Day one · 18 July · 5–9pm · 4 hours</span><h3>Become the one they choose</h3><p class="body-md">Three sessions: reinvent the business AI just made possible, find the game you can win, and position yourself as the Key Person of Influence in your niche.</p></div>
+     <div class="card"><span class="when">Day two · 19 July · 5–9pm · 4 hours</span><h3>Become oversubscribed</h3><p class="body-md">Four sessions: the demand-side shift, signals before sales, the perfect repeatable week, your AI workforce — then build your 12-month customer-growth plan live.</p></div>
+   </div>
+ </div>
+</section>
+
+<section class="module" id="day1">
+ <div class="wrap">
+   <div class="day-head section-head" style="margin-bottom:16px">
+     <div><span class="overline">Accelerator · Day one</span><h2 style="margin-top:16px">Become the one they choose</h2></div>
+     <span class="when">18 July · 5–9pm · 4 hours</span>
+   </div>
+   <p class="body-lg" style="max-width:800px">Positioning before promotion. Before anyone can grow customers, the market has to know who they are and why they're valuable. Day one moves the room from "I sell time for money" to "I'm the Key Person of Influence for a game I can win." Structure below; the full session scripts are one click away.</p>
+   <ul class="outline">
+     <li>WELCOME (~10 min)</li>
+     <li>SESSION 1 — YOUR BUSINESS IS ALREADY DEAD (~50 min)</li>
+     <li>SESSION 2 — THE GAME YOU CAN WIN (~50 min)</li>
+     <li>BREAK (10 min)</li>
+     <li>SESSION 3 — BECOME A KEY PERSON OF INFLUENCE (~55 min)</li>
+     <li>INTEGRATION + Q&amp;A (~25 min)</li>
+   </ul>
+   <div class="chapters">
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">WELCOME (~10 min)</span><span class="chapter-point">Set the frame: this is the most opportunity-rich moment in business history, and everyone in the room is early.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span>Title card: <strong>THE SCIENCE OF GROWING CUSTOMERS</strong> — <em>Day 1: Become the one they choose.</em> Deep-blue brand palette. Lower third: "Daniel Priestley · Live at Mindvalley University."</div>
+<p class="line"><span class="spk">DANIEL:</span> Thank you, it's wonderful to be here, and I can feel the energy in this room. I've spent the last 25 years as an entrepreneur, and the backdrop the whole time has been constant disruption — the dot-com bubble, the global financial crisis, Brexit, the pandemic. And honestly? I have never felt the way I feel right now. I think we have the biggest, most incredible technology that's ever come along, and it's making things possible that were never possible before.</p>
+<p>Some people are feeling a little bit terrified. That's justified. And a lot of people are feeling opportunistic and optimistic — and that's <em>also</em> justified. Over the next two evenings I'm going to give you the frameworks I use to run a portfolio of businesses, take my kids to school every day, and still grow customers on purpose. This is the science of building a business that works.</p>
+<div class="cue cue-facil"><span class="cue-tag">Facilitation</span>Open with the "you are early" reframe — it sets an abundant, opportunistic tone for everything that follows. Get the room to call out, in the room, what business they arrived with. We'll refer back to it in Session 1.</div>
+<p class="line"><span class="spk">DANIEL:</span> Here's where we're going. Tonight is about <em>positioning</em> — becoming the one they choose. Tomorrow is about <em>demand</em> — becoming oversubscribed. By the time you leave, you'll have a plan to grow customers every single week. Let's begin.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 1 — YOUR BUSINESS IS ALREADY DEAD (~50 min)</span><span class="chapter-point">The empowering reframe: whatever business you walked in with is dead. AI means everything is up for grabs — including for you.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Mindset.</strong> <em>From "I'm late and threatened" to "I'm early and everything is an opportunity."</em></p>
+<p><strong>Pillars hit:</strong> Critical Reflection · Active Study &amp; Writing · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">THE FIRST PRINCIPLE OF AN ENTREPRENEUR</h3>
+<p class="line"><span class="spk">DANIEL:</span> Let's go back to first principles. Why does an entrepreneur exist at all? An entrepreneur exists because they can see a way to do something <strong>better, faster, cheaper, or with more emotional benefit</strong> than what already exists. Hold that. The beauty of AI is that <em>everything in the whole world is now a new opportunity.</em> Every business that exists could be done better, faster, cheaper, with more emotional benefit if AI were used well. Which means the entire world is up for grabs.</p>
+<p>Society reflects technology. We mixed tin and copper and got the Bronze Age. The British invented the limited liability company in 1855 — not even a technology, just a new agreement — and it transformed the world. We're leaving the industrial age and entering the age of intelligence. And when a new technology arrives, the world reorganises around it.</p>
+<div class="cue cue-slide"><span class="cue-tag">On screen</span>The dot grid: each grey dot = 3.2 million people. Most people on Earth have <em>never used AI once</em>. The green dots have had a little chat. The tiny yellow dots pay for a subscription. The single red dot uses the advanced features.</div>
+<p class="line"><span class="spk">DANIEL:</span> Look at this. You are not behind the curve. You are not late to the party. You are <em>ridiculously early</em>. If you're in this room, you're going to be fine. You're going to invent things, create things, connect with people, and do wonderfully well.</p>
+<h3 class="s-part">THE FRAME: "MY BUSINESS IS ALREADY DEAD"</h3>
+<p class="line"><span class="spk">DANIEL:</span> So here's the first frame I use with all my businesses. I assume my business is <strong>already dead</strong>. Whatever business you walked in here with tonight — I want you to treat it as dead. It needs reinventing. And that's an <em>empowering</em> idea, because most people feel their business isn't as good as they'd like. This is your permission to keep the best bits and reinvent the rest — at light speed.</p>
+<p>But you can't do that if you're holding on. Holding onto "I have to sell time for money." Holding onto "I have to physically meet clients to give them value." Holding onto "the only way to earn more is to work harder." Drop those. Maybe you could work a lot <em>less</em> and earn a lot <em>more</em> if you did it differently.</p>
+<p>I'm not asking you to do anything I haven't done. When ChatGPT arrived, I had a group of time-for-money agencies. One by one I turned each into a technology company. Skill Online became ScoreApp. RethinkPress became BookMagic. Those four businesses went from being worth about <strong>$8 million to $80 million</strong>. Same core essence — reinvented.</p>
+<h3 class="s-part">THE JEVONS PARADOX — WHY YOU SHOULDN'T FEAR THIS</h3>
+<p class="line"><span class="spk">DANIEL:</span> There's something called the Jevons Paradox: new technology produces unexpected results. Everyone said Zoom would kill air travel. Instead people made new connections all over the world — and then wanted to go meet them. Business-class travel has never been more vibrant. YouTube was going to kill television; Hollywood lost 25,000 jobs, but <em>YouTubing</em> created 550,000. My mother was a journalist — journalism was "killed" by content creation, and now there are twenty times more people making a living from content than ever made it from journalism.</p>
+<p>New technology is always predicted to wipe things out. In reality it creates whole new categories of opportunity. You don't have to fear this. You just have to step through it: use AI daily, embed it in your processes, build AI-enabled products.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room</span><strong>Reinvent the dead business.</strong> On paper, two columns. Left: the best bits of your current business worth keeping. Right: the bits you'd reinvent if you started today with AI and could do it better, faster, cheaper, or with more emotional benefit. One sentence at the bottom: <em>"If my business were already dead, the version I'd build tomorrow is ___."</em></div>
+<p class="line"><span class="spk">DANIEL:</span> See AI as a new playground. Kids at a new playground aren't scared — they're excited to try the slides. As adults we see disruption and think "that's going to ruin my playground." I want you to remember what it felt like to be excited to play. This is the most exciting playground we've ever been handed.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 2 — THE GAME YOU CAN WIN (~50 min)</span><span class="chapter-point">In a power-law world, average is punished. Find the micro-niche where your history makes you the best — and mine your intellectual capital.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Mindset → Show-Up.</strong> <em>From "I'm average competition" to "I'm extraordinary at one narrow thing."</em></p>
+<p><strong>Pillars hit:</strong> Critical Reflection · Active Study &amp; Writing · Altered States &amp; Insight (the nature reflection).</p>
+<hr>
+<h3 class="s-part">NORMAL DISTRIBUTION IS OVER. WELCOME TO THE POWER LAW.</h3>
+<p class="line"><span class="spk">DANIEL:</span> The industrial age ran on <strong>normal distribution</strong>: average people, average jobs, average pay. The digital age runs on the <strong>power law</strong>: a small group dominates and earns extraordinary amounts. That sounds brutal — but AI brings something wonderful with it: the <em>atomisation</em> of industries into micro-niches. You don't have to win the whole market. You can be at the very top of the power law for something tiny and specific.</p>
+<p>Steven Box is the Michael Jordan of a tabletop game called Warhammer — and he gets paid a fortune to turn up and play. A friend of mine, Driver 61, was a racing driver and now runs track days; 1.4 million subscribers, living his best life, top of the power law for one thing. My friend Leanne built an agency for AI-enabled executive assistants in the Philippines, wrote the book, and owns that niche.</p>
+<p class="line"><span class="spk">DANIEL:</span> So stop seeing yourself as average. See yourself as extraordinary at a <em>very narrow</em> thing. Define a game you can win.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room</span><strong>The game you can win.</strong> Finish this sentence and say it out loud to the person next to you: <em>"I'm one of the best in the world at ___ for ___."</em> It doesn't have to be enormous — "I'm really good at helping men over 50 run their first 5K," or "I beat imposter syndrome for people returning to the legal profession." If you can claim it, we can position you at the top of the power law. Own it. Don't be shy about it.</p></div>
+<h3 class="s-part">YOUR INTELLECTUAL CAPITAL</h3>
+<p class="line"><span class="spk">DANIEL:</span> Your personal brand stands on three pillars: your <strong>intellectual capital</strong>, your <strong>ideal customer persona</strong>, and your <strong>product ecosystem</strong>. Tonight we mine the first one. Intellectual capital is your origin story, your triumphs and disasters, your playbooks — the things only <em>you</em> can say because of <em>your</em> last 5, 10, 15 years. When you plug that into AI, it lets you create products and services that are unmistakably yours.</p>
+<p>Steve Jobs said we connect the dots looking backwards. Don't wait until the end of your life to do it. Do it this week. The most powerful question to ask is: <em>"When did I last do something special — that would interest a certain type of person, where I can quantify the result, and explain it step by step?"</em> Those are your proof stories.</p>
+<div class="cue cue-slide"><span class="cue-tag">On screen</span>Lucy Makara, age 70: 30 years in publishing, 13 books, hundreds of authors helped. She documented her intellectual capital, teamed with one technologist, built <em>BookMagic</em>, and raised money at a $5M valuation. Donna: 15+ years winning awards, wrote a book called <em>Win</em>, built <em>AwardsApp.ai</em> with her brother, raised at ~$5M. Same pattern every time.</div>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · take-home</span><strong>Pause, reflect, document.</strong> This week, go out into nature with a notepad and a pen. Pause and reflect. Mark your high points and low points from 2020 to now. Capture three proof stories using the test: interesting to a certain type of person, quantifiable result, explainable step by step. That's the raw material for everything we build tomorrow.</p></div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">BREAK (10 min)</span><span class="chapter-point">A real pause to let the positioning work settle before we build the pitch.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span><strong>Back in 10 minutes.</strong> Countdown timer. On-screen text: <em>Grab water. Stretch. Have your three proof stories ready — we're about to build your pitch.</em></div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 3 — BECOME A KEY PERSON OF INFLUENCE (~55 min)</span><span class="chapter-point">Newbie, worker bee, or Key Person of Influence — the market decides in seconds. Build the pitch and the five pillars that make you the one they choose.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Show-Up + Tool Kit Upgrade.</strong> <em>A repeatable pitch and a five-part influence system they keep using.</em></p>
+<p><strong>Pillars hit:</strong> Active Study &amp; Writing · Social Learning &amp; Discourse · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">THE DEATH OF THE CORPORATE BRAND</h3>
+<p class="line"><span class="spk">DANIEL:</span> Quick question — the Google "G", in colour, what colour is the G? People shout red, green, yellow, blue. It's blue. It's always been blue. The point: we don't remember corporate logos and we don't trust corporate brands the way we used to. We love <em>people</em>. Richard Branson has far more followers than Virgin. Three million people follow Steven Bartlett personally; only 45,000 follow Diary of a CEO as a brand. In the age of AI, <strong>being known is an asset.</strong> So we build a personal brand.</p>
+<p>And a personal brand doesn't mean draping yourself over a Ferrari. It means being the person who takes your ideal customer on a journey and guides them through it. When people meet you, they instantly file you as one of three things: a <strong>newbie</strong>, a <strong>worker bee</strong>, or a <strong>Key Person of Influence</strong>. Your whole job is to be positioned as the Key Person of Influence for getting the result your customer wants.</p>
+<h3 class="s-part">YOUR SIGNATURE MOVE</h3>
+<p class="line"><span class="spk">DANIEL:</span> You become a Key Person of Influence by owning a <strong>signature move</strong> — a signature piece of intellectual property people know you for. Fifteen years ago mine was becoming the Key Person of Influence for entrepreneurs. Then I wrote <em>Oversubscribed</em> and moved into marketing campaigns. Then <em>24 Assets</em> for digital businesses. Once you own the signature thing, people happily do all sorts of other things with you.</p>
+<h3 class="s-part">THE PITCH: NAME · SAME · FAME · AIM · GAME</h3>
+<p class="line"><span class="spk">DANIEL:</span> The difference between a newbie and a Key Person of Influence is the pitch. "I'm a licensed financial adviser in Brisbane" — that's a newbie. A Key Person of Influence runs the framework <strong>Name, Same, Fame, Aim, Game</strong>:</p>
+<ul>
+<li><strong>Name</strong> — who you are and your company.</li>
+<li><strong>Same</strong> — the boring box you put yourself in so people can place you. Drive the energy <em>down</em> first.</li>
+<li><strong>Fame</strong> — the proof: the book, the awards, the stage, the podcast, the results. Now drive the energy <em>up</em>.</li>
+<li><strong>Aim</strong> — who you serve and the transformation you create for them (your ideal customer persona).</li>
+<li><strong>Game</strong> — the bigger mission you're playing for.</li>
+</ul>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room + AI</span><strong>Build your pitch.</strong> Draft your Name-Same-Fame-Aim-Game pitch and get it under 45 seconds. Then open Claude or ChatGPT, give it the framework, and ask it to interview you and sharpen it. Deliver it to a partner. Then do it again. <em>Entrepreneurial success is the journey of a thousand pitches</em> — the penalty for being average has never been higher, and the payoff for being extraordinary has never been greater. Start the thousand tonight.</div>
+<h3 class="s-part">THE FIVE PILLARS OF INFLUENCE: PITCH · PUBLISH · PRODUCT · PROFILE · PARTNERSHIPS</h3>
+<p class="line"><span class="spk">DANIEL:</span> Positioning runs on five Ps. <strong>Pitch</strong> — the answer to "what do you do?". <strong>Publish</strong> — put your ideas into scalable digital assets, because people need roughly seven hours and eleven interactions with your content before they trust you enough to buy. <strong>Product</strong> — the ecosystem people can buy (we build this tomorrow). <strong>Profile</strong> — being seen by the right people. <strong>Partnerships</strong> — borrowing other people's audiences. Do these five things well and you'll change your entire trajectory. Tonight we've nailed the pitch and started publishing. Tomorrow we turn this into a customer engine.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">INTEGRATION + Q&amp;A (~25 min)</span><span class="chapter-point">Lock in tonight's positioning and answer the questions live before we close day one.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span><strong>INTEGRATION.</strong> Recap the three moves: <em>1. Your business is already dead — reinvent it. 2. Define the game you can win. 3. Become the Key Person of Influence with your pitch.</em> Then a Q&amp;A holding slide.</div>
+<p class="line"><span class="spk">DANIEL:</span> Before we close — what's your number one light-bulb moment from tonight? Call it out. ... "My business is already dead but I can reinvent it." "I need to find something I'm best in the world at." "Personal brands get more cut-through than corporate brands." "I'm not late to the party." Beautiful. That's exactly the shift.</p>
+<div class="cue cue-facil"><span class="cue-tag">Facilitation</span>Take 3–4 live questions. Keep answers high-level and principle-first so every answer applies to the whole room, not just the asker. Send everyone home with the take-home: <em>pause, reflect, document</em> — three proof stories, ready for tomorrow.</div>
+<p class="line"><span class="spk">DANIEL:</span> Tomorrow night we take everything you've positioned and we make you <strong>oversubscribed</strong>. Get some rest — and don't be a perfectionist. Be a directionalist. See you tomorrow.</p>
+</div></details>
+
+   </div>
+ </div>
+</section>
+
+<section class="module" id="day2" style="background:var(--bg-muted)">
+ <div class="wrap">
+   <div class="day-head section-head" style="margin-bottom:16px">
+     <div><span class="overline">Accelerator · Day two</span><h2 style="margin-top:16px">Become oversubscribed</h2></div>
+     <span class="when">19 July · 5–9pm · 4 hours</span>
+   </div>
+   <p class="body-lg" style="max-width:800px">Now the engine. Day two turns positioning into a predictable flow of customers: the demand-side mindset, signals before sales, the perfect repeatable week, and an AI workforce that does the work. Everyone leaves holding a 12-month customer-growth plan.</p>
+   <ul class="outline">
+     <li>RE-ENTRY &amp; RECAP (~10 min)</li>
+     <li>SESSION 4 — THE DEMAND-SIDE FOUNDER (~45 min)</li>
+     <li>SESSION 5 — FIRST MAKE YOUR MARKET, THEN YOUR SALES (~45 min)</li>
+     <li>BREAK (10 min)</li>
+     <li>SESSION 6 — THE PERFECT REPEATABLE WEEK (~45 min)</li>
+     <li>SESSION 7 — YOUR AI WORKFORCE (~45 min)</li>
+     <li>BREAK (10 min)</li>
+     <li>SESSION 8 — YOUR 12-MONTH CUSTOMER-GROWTH PLAN (~50 min)</li>
+   </ul>
+   <div class="chapters">
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">RE-ENTRY &amp; RECAP (~10 min)</span><span class="chapter-point">Cross the bridge from positioning to demand — and from "directionally correct" energy into building.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span>Title card: <em>"DAY 2 — BECOME OVERSUBSCRIBED."</em> Recap slide listing Day 1's three moves: <em>1. Your business is already dead. 2. The game you can win. 3. Key Person of Influence.</em></div>
+<p class="line"><span class="spk">DANIEL:</span> Welcome back. Let's celebrate a quick win first — call out one small thing you did since last night. A pitch you rewrote, a proof story you found, a post you published. Little wins keep your brain on track. Last night we made you the one they choose. Tonight we make demand outstrip supply. This is the science of growing customers.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 4 — THE DEMAND-SIDE FOUNDER (~45 min)</span><span class="chapter-point">Only oversubscribed businesses make a profit. Stop thinking supply-first. Set your capacity, build connection, and create demand-and-supply tension.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Mindset.</strong> <em>From supply-side ("I have something to sell") to demand-side ("I have someone who wants to buy").</em></p>
+<p><strong>Pillars hit:</strong> Critical Reflection · Active Study &amp; Writing.</p>
+<hr>
+<h3 class="s-part">PRINCIPLE 1 — ONLY OVERSUBSCRIBED BUSINESSES MAKE A PROFIT</h3>
+<p class="line"><span class="spk">DANIEL:</span> This is the root cause of profitability. <strong>Demand must outstrip supply.</strong> There is no profit god handing out profit fairly — there is only demand-and-supply tension. If you had a million followers but could only take 12 coaching clients a year, you'd make a fortune. If you sell something infinitely scalable that everyone has, the price falls to zero. 90% of entrepreneurs are <em>supply-side</em>: they think their business exists because they have something to sell, so they go to the factory first. A <em>demand-side</em> entrepreneur thinks their business exists because someone wants to buy — so they launch a waiting list first. Demand-side founders win nine times out of ten. Your job is to manufacture buyers.</p>
+<h3 class="s-part">YOUR OFFICIAL CAPACITY</h3>
+<p class="line"><span class="spk">DANIEL:</span> To create the imbalance, name your <strong>official capacity</strong> — the number of customers you can serve while keeping them <em>delighted</em>. A restaurant for 50 is delightful; cram in 80 and everyone suffers. "Unlimited" capacity means unlimited bananas with limited buyers — price goes to zero. So pick a number: 10 clients, 600 seats, 56 patients a month. That constraint is what makes you profitable.</p>
+<h3 class="s-part">PRINCIPLE 2 — CONNECTION BEATS COMPETITION</h3>
+<p class="line"><span class="spk">DANIEL:</span> Picture a line. One end is <strong>competition</strong>, the other is <strong>connection</strong>. The more connection, the less competition. I wouldn't trade my kids for "better-behaved" ones — connection erases competition. So we don't chase sales; we build connection first. A business coach delivers a brilliant three-hour talk to 300 people, then says, "Each year I take 10 coaching clients." Three hundred feel connected; ten spots exist. Instantly oversubscribed — no discounting required.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room</span><strong>Capacity × 50.</strong> Write your official capacity for the year. Multiply by 50 — that's roughly how many people need to feel a real connection with you online to stay reliably oversubscribed (in a physical room it's closer to 20). Capacity of 10 → ~500 connected people. That number sets the scale of your publishing and partnerships. Big numbers? You'll be living on podcasts and YouTube — and that's fine.</div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 5 — FIRST MAKE YOUR MARKET, THEN YOUR SALES (~45 min)</span><span class="chapter-point">Signals before sales. Warm people for seven hours and eleven interactions, then convert with logic, emotion and urgency — across a full product ecosystem.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Tool Kit Upgrade.</strong> <em>A repeatable signals-then-sales method and a four-part product ecosystem.</em></p>
+<p><strong>Pillars hit:</strong> Active Study &amp; Writing · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">PRINCIPLE 3 — FIRST MAKE YOUR MARKET, THEN MAKE YOUR SALES</h3>
+<p class="line"><span class="spk">DANIEL:</span> Most people scream "buy my stuff" at a cold market. Flip it: <strong>first get signals, then get sales.</strong> I won't sell to anyone until they've signalled they want me to. Strong signals: register on a waiting list, book a workshop, stay after the talk, join a discussion group, complete a scorecard, request an info pack. At my live workshops I'd offer a coffee break — "if you'd like me to put my sales hat on, come back and sit down; if not, head off with my thanks." Sixteen of twenty would come back, knowing fifteen others were interested. Instant tension.</p>
+<div class="cue cue-slide"><span class="cue-tag">On screen</span>The re-engagement email: <em>"Dear [name], we're launching [thing] in July, perfect for people who want [outcome]. Are you still interested? Would you like me to send the details when they're ready?"</em> And the high-open subject line: <em>"Have you given up on [weight loss / business growth / clear skin]?"</em></div>
+<h3 class="s-part">PRINCIPLE 4 — PEOPLE BUY TO RESOLVE TENSION</h3>
+<p class="line"><span class="spk">DANIEL:</span> People buy because their <strong>current reality</strong> doesn't match their <strong>desired reality</strong>, there are <strong>obstacles</strong> in the way, and they've <strong>tried things that didn't work</strong>. You're the path of least resistance from here to there. While warming people up, ask more questions and collect more data, so you understand exactly what's driving each buyer.</p>
+<h3 class="s-part">PRINCIPLE 5 — PEOPLE BUY WHEN THE CONDITIONS ARE RIGHT</h3>
+<p class="line"><span class="spk">DANIEL:</span> The conditions are <strong>logic, emotion, and urgency</strong>. Logic: they can justify the ROI on a spreadsheet. Emotion: they can tell the story of why life is better after buying. Urgency: a real fear of missing out. Logic and emotion are the engine; urgency is just the spice you sprinkle on top.</p>
+<h3 class="s-part">THE PRODUCT ECOSYSTEM</h3>
+<p class="line"><span class="spk">DANIEL:</span> Around every piece of signature intellectual property, build four products. Two for <strong>growth</strong>: a <strong>gift</strong> (free, scalable — your podcast, YouTube, a free scorecard) and a <strong>product for prospects</strong> (a small commitment of time and data, not much money — a book, an assessment, a workshop). Two for <strong>profit</strong>: a <strong>core offering</strong> (gold / silver / bronze implementation) and a <strong>product for clients</strong> (the ongoing subscription or relationship). Skip growth products and you starve; skip profit products and you can't monetise. The profit is in the <em>whole ecosystem</em>.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room</span><strong>Map your ecosystem.</strong> Take your signature IP from Day 1 and fill the four boxes: Gift · Product for Prospects · Core Offering · Product for Clients. Then write the single signal you'll ask your market for this month — and the words you'll use to ask.</div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">BREAK (10 min)</span><span class="chapter-point">A real pause before we turn principles into a weekly machine.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span><strong>Back in 10 minutes.</strong> Countdown timer. On-screen text: <em>Grab water. Stretch. Bring your ecosystem map — we're about to build the engine that fills it.</em></div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 6 — THE PERFECT REPEATABLE WEEK (~45 min)</span><span class="chapter-point">The three-part year: a weekly campaign you crank the handle on, a quarterly spotlight, and an always-on big message. This is how you hit capacity on purpose.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Habit + Tool Kit Upgrade.</strong> <em>A marketing rhythm they run every week, forever.</em></p>
+<p><strong>Pillars hit:</strong> Active Study &amp; Writing · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">THE THREE-PART YEAR</h3>
+<p class="line"><span class="spk">DANIEL:</span> I learned this at 19 from my first mentor, John: a <strong>weekly campaign</strong>, a <strong>quarterly campaign</strong>, and an <strong>annual big message</strong>. We launched and did $6M in year one. I've used it for 25 years. Three layers:</p>
+<ul>
+<li><strong>The Perfect Repeatable Week</strong> — one campaign you run ~40 weeks a year. Same offer, same rhythm, crank the handle. If you want 40 customers, that's one a week.</li>
+<li><strong>The Quarterly Spotlight</strong> — four times a year, something special: a guest speaker, an event, a launch, a collaboration, a dinner for 12 ideal clients. Apple does it every September.</li>
+<li><strong>The 7-11 Big Message</strong> — always-on social: short-form content daily, long-form monthly, every piece calling back to the repeatable week. Seven hours, eleven interactions, four platforms — every year.</li>
+</ul>
+<h3 class="s-part">THE LAPSE DASHBOARD</h3>
+<p class="line"><span class="spk">DANIEL:</span> Run your week on one dashboard: <strong>LAPSE — Leads, Appointments, Presentations, Sales</strong>. When I launched my first company I put a $6,300 ad on a credit card every Sunday; it brought 70 people to a Wednesday workshop; ~10% bought at $2,250. We ran that <em>identical</em> week 43 times — $1.3M revenue, $400K profit, no audience, no brand, just a repeatable week. ScoreApp's first year did the same and now does over £500K a month. The magic isn't novelty. It's repetition.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room + AI</span><strong>Design your repeatable week.</strong> Sketch your one weekly campaign: the gift or scorecard that collects signals → the presentation or call → the offer. Prompt to use: <em>"I want to create a simple, repeatable marketing campaign I can run every week to grow sales. Ask me questions, then suggest the approach."</em> Then name your four quarterly spotlights for the year.</div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 7 — YOUR AI WORKFORCE (~45 min)</span><span class="chapter-point">Plant prompts in digital soil and let the technology do steps 3–8. Build an AI wrapper around your IP, and make dynamism your moat.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Tool Kit Upgrade + Lifestyle.</strong> <em>Leverage so a tiny team grows customers like a big one.</em></p>
+<p><strong>Pillars hit:</strong> Active Study &amp; Writing · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">SPEED TO MARKET + SPEED TO VALUE</h3>
+<p class="line"><span class="spk">DANIEL:</span> There are only two sides to any business: <strong>speed to market</strong> (reaching customers and getting them excited) and <strong>speed to value</strong> (delivering what they want and delighting them). All you orchestrate is those two — and AI accelerates both. With Neutonic, a focus drink, we asked: what is the customer really trying to achieve? A two-hour focus session. So AI tells that story to the market <em>and</em> ships a focus plan, a goal-setting chatbot, and playlists with the can. Even buying a drink kicks off an AI agent working on the customer's behalf.</p>
+<h3 class="s-part">DIGITAL SOIL — YOUR JOB IS STEPS 1, 2, 9, 10</h3>
+<p class="line"><span class="spk">DANIEL:</span> A farmer knows <em>when</em> and <em>what</em> to plant (wisdom), plants the seed (initiation), lets the soil automate the growth, then harvests and takes it to market. We now live on <strong>digital soil</strong>. Your job is steps 1 and 2 — know the problem worth solving and plant the prompt — and steps 9 and 10 — turn the output into a product and take it to market. Steps 3 to 8, the technology does. And you have a new workforce to do it: I call them <strong>Atlanteans</strong> — AI agents who'll work 24/7, for free, with PhDs, eager to help.</p>
+<h3 class="s-part">THE AI WRAPPER</h3>
+<p class="line"><span class="spk">DANIEL:</span> You can't build the power plant, but you can build the blender that plugs into it. You won't build ChatGPT or Claude — but you can build a business that runs on top of them. The formula: <strong>collect customer data → mix it with your intellectual capital → run it through generative AI → return it inside an app or customer portal.</strong> That's ScoreApp, valued at over $50M with 150,000 customers. That's BookMagic, AwardsApp. Your IP plus AI, wrapped in a portal.</p>
+<h3 class="s-part">DYNAMISM IS THE NEW MOAT</h3>
+<p class="line"><span class="spk">DANIEL:</span> Forget the old moats — big labour forces, huge capital, a giant corporate brand. In a fast-moving world, sitting in a castle is foolish. Be <strong>James Bond</strong> instead: adaptive, dynamic, ready for any situation. The new defensibilities are intellectual property, media, data and technology — the work that happens <em>above</em> the time-for-money line. Five people and AI can build what used to take hundreds.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · in the room</span><strong>Find your wrapper.</strong> Write the one decision, diagnosis, or output your customers want most. Sketch the wrapper: what data you'd collect, what slice of your IP it mixes with, what the AI returns inside a portal. This becomes a gift or product-for-prospects that fuels your repeatable week.</div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">BREAK (10 min)</span><span class="chapter-point">A short reset before we build the plan everyone leaves with.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<div class="cue cue-slide"><span class="cue-tag">On screen</span><strong>Back in 10 minutes.</strong> Countdown timer. On-screen text: <em>Hydrate, move — then we put the whole science of growing customers onto one page.</em></div>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">SESSION 8 — YOUR 12-MONTH CUSTOMER-GROWTH PLAN (~50 min)</span><span class="chapter-point">The six-step method from idea to exit, serial vs plural, and the one-page plan everyone leaves holding. Close on hope and momentum.</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide script</span></span></summary><div class="chapter-a script">
+<p><strong>Shift advanced: Show-Up + Habit.</strong> <em>A concrete plan and a commitment to run it.</em></p>
+<p><strong>Pillars hit:</strong> Active Study &amp; Writing · Social Learning &amp; Discourse · Rapid Implementation.</p>
+<hr>
+<h3 class="s-part">THE SIX-STEP ENTREPRENEURIAL METHOD</h3>
+<p class="line"><span class="spk">DANIEL:</span> Every venture moves through the same six steps, and AI accelerates each one:</p>
+<ul>
+<li><strong>1. Founder–Opportunity Fit</strong> — the right opportunity for <em>you</em> (usually a job for one).</li>
+<li><strong>2. Minimum Viable Product Testing</strong> — a landing page and a waiting list; can you get 100 leads? (you + one).</li>
+<li><strong>3. Product–Market Fit</strong> — sell to real customers, find who values it most (~4 people).</li>
+<li><strong>4. Go-to-Market</strong> — make sales every week (4–8 people).</li>
+<li><strong>5. Scale-Up</strong> — more products, more reach (as few as 30, sometimes 8).</li>
+<li><strong>6. Exit</strong> — sell for a life-changing amount (~4 people).</li>
+</ul>
+<p>These steps didn't change because AI arrived — they just got faster. You can be a <strong>serial entrepreneur</strong> (one business at a time, each bigger) or a <strong>plural entrepreneur</strong> like me — several projects at different stages at once, each with its own value-creation loop, all manageable because AI does the work.</p>
+<div class="cue cue-exercise"><span class="cue-tag">Exercise · the deliverable</span><strong>Your one-page customer-growth plan.</strong> On a single page: (1) the game you can win + your pitch; (2) your official capacity and capacity × 50; (3) your four-part product ecosystem; (4) your perfect repeatable week + four quarterly spotlights; (5) your AI wrapper; (6) which of the six steps you're on now and the next step. Share one line of it with the person beside you and commit out loud.</div>
+<h3 class="s-part">CLOSE — APPROACH IT LIKE A NEW PLAYGROUND</h3>
+<p class="line"><span class="spk">DANIEL:</span> Zoom out. Humans just synthesised all of human knowledge into one technology and handed everyone a new level of intelligence — and the ability to automate the jobs they never liked. That can't be a bad thing. It'll be rocky, some feathers will be ruffled, some old businesses will be disrupted. But the people in this room are going to guide their corner of the world in the right direction. Approach it with hope and optimism. Prepare for disruption, expect the best. Be a directionalist, not a perfectionist. Pick one or two things from these two nights and keep moving in the right direction — and have fun, because the more fun you have in business, the more money you make too.</p>
+</div></details>
+
+   </div>
+ </div>
+</section>
+
+<section id="stories">
+ <div class="wrap">
+   <div class="section-head">
+     <span class="overline">Proof</span>
+     <h2>What these frameworks already produce</h2>
+     <p class="body-lg">Real, verifiable results from Daniel's own portfolio and the people he's taught — drawn directly from his Mindvalley sessions. The pattern is consistent: document your intellectual capital, build the ecosystem, become oversubscribed.</p>
+     <p class="stories-note">Verbatim examples from Daniel Priestley's Mindvalley material (AI Summit 2026; Entrepreneurship Mastery — Oversubscription, 5 Pillars of Influence, Signature Positioning). Cited so every claim can be traced back to Daniel.</p>
+   </div>
+   <div class="stories-grid">
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">AI Summit 2026</span></div><blockquote>Four time-for-money agencies, reinvented into tech: ~$8M → ~$80M.</blockquote><p class="story-ctx">"We took the core essence and put it into ScoreApp, BookMagic and others."</p><figcaption><span class="story-name">Daniel Priestley's portfolio</span><span class="story-meta">Reinventing agencies with AI</span></figcaption></figure>
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">AI Summit 2026</span></div><blockquote>ScoreApp: 150,000 customers, valued at over $50M.</blockquote><p class="story-ctx">"It's not that I created AI — I created something that runs on AI." Built on the AI-wrapper formula.</p><figcaption><span class="story-name">ScoreApp</span><span class="story-meta">The AI wrapper, scaled</span></figcaption></figure>
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">AI Summit 2026</span></div><blockquote>At 70, Lucy built a $5M-valuation tech business.</blockquote><p class="story-ctx">30 years in publishing, documented into BookMagic with one technologist, raised at a $5M valuation.</p><figcaption><span class="story-name">Lucy Makara</span><span class="story-meta">Intellectual capital → portal</span></figcaption></figure>
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">AI Summit 2026</span></div><blockquote>From awards expertise to AwardsApp.ai, raised at ~$5M.</blockquote><p class="story-ctx">15+ years winning awards, a book called <em>Win</em>, an AI portal built with her brother.</p><figcaption><span class="story-name">Donna</span><span class="story-meta">Same pattern, different niche</span></figcaption></figure>
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">Oversubscription · EM</span></div><blockquote>Zero to $1.3M and $400K profit — on a credit card.</blockquote><p class="story-ctx">"No audience, no brand. I ran the same perfect repeatable week 43 times." Bootstrapped at 22.</p><figcaption><span class="story-name">Daniel's first company</span><span class="story-meta">The repeatable week</span></figcaption></figure>
+     <figure class="story"><div class="story-tags"><span class="story-tag daniel">Oversubscription · EM</span></div><blockquote>A software company warmed to a ~$72M valuation.</blockquote><p class="story-ctx">"Software is my bread and butter — we apply oversubscription to features, upgrades and even the exit."</p><figcaption><span class="story-name">Daniel's SaaS portfolio</span><span class="story-meta">Demand-side, B2B</span></figcaption></figure>
+   </div>
+ </div>
+</section>
+
+<section id="sources" style="background:var(--bg-muted);padding-top:56px;padding-bottom:72px">
+ <div class="wrap">
+   <div class="section-head" style="margin-bottom:20px">
+     <span class="overline">Source traceability</span>
+     <h2 style="margin-top:16px;font-size:32px">Every framework traces to Daniel's own material</h2>
+   </div>
+   <ul class="sources">
+     <li><strong>Your business is already dead · Jevons Paradox · power law / micro-niche · digital soil · Atlanteans · AI wrapper · speed-to-market &amp; speed-to-value · dynamism is the new moat · the six-step method · serial vs plural</strong> — <em>AI Summit 2026, "How AI Rewrites the Entrepreneur's Playbook" (Daniel Priestley).</em></li>
+     <li><strong>Only oversubscribed businesses make a profit · supply-side vs demand-side · official capacity · connection vs competition · capacity × 50 · signals before sales · 7 hours / 11 interactions · logic-emotion-urgency · the three-part year · the LAPSE dashboard</strong> — <em>Entrepreneurship Mastery, "Oversubscription Strategies / Waitlists, Scarcity &amp; Launch Mechanics" (Daniel Priestley).</em></li>
+     <li><strong>Key Person of Influence · signature move · Name-Same-Fame-Aim-Game · the five Ps (Pitch, Publish, Product, Profile, Partnerships) · the four-part product ecosystem · the journey of a thousand pitches</strong> — <em>Entrepreneurship Mastery, "The 5 Pillars of Influence" &amp; "Your Signature Positioning" (Daniel Priestley).</em></li>
+     <li><strong>Intellectual capital · ideal customer persona · pause-reflect-document · proof stories · the death of the corporate brand</strong> — <em>AI Summit 2026 &amp; the 5 Pillars of Influence (Daniel Priestley).</em></li>
+   </ul>
+ </div>
+</section>
+
+<footer><div class="wrap">
+ <div class="wordmark">Mindvalley<span style="color:var(--brand-bright)">.</span></div>
+ <div>The Science of Growing Customers — curriculum for Daniel Priestley · Accelerator 18 &amp; 19 July · Mindvalley University, Estonia</div>
+</div></footer>
+</body>
+</html>
