@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<title>Evergreen Ad Scripts — The Science of Growing Customers · Daniel Priestley</title>
+<meta name="description" content="Ten evergreen ad scripts driving traffic to Daniel Priestley's free webinar 'How to Get More Customers Than You Can Handle'. Mapped to Hook Point formats, anchored to Daniel's own words."/>
+<style>
+:root{
+ --brand:#1832B4;--brand-bright:#3D63F5;--brand-content:#1429A0;--brand-dark:#0F1F7A;
+ --brand-light:#EEF2FF;--brand-border:#D6DEFF;--green:#159F65;--orange:#ED6325;
+ --orange-content:#C9541F;--orange-light:#FFF4E9;--pink:#DF1A6F;--blue-dark:#1832B4;
+ --grey-100:#F9F9F9;--grey-200:#F3F4F6;--grey-300:#CED1D7;--grey-400:#979CA5;
+ --grey-500:#595E67;--grey-600:#292D38;--ink:#0F131A;
+ --bg:#fff;--bg-muted:#F9F9F9;--bg-subtle:#F3F4F6;--surface:#fff;
+ --text:#0F131A;--text-muted:#595E67;--text-subtle:#71767F;--border:#DFE1E5;
+ --border-strong:#CED1D7;--focus-ring:#3D63F5;--dark-bg:#0F131A;
+ --shadow-light:0 4px 15px 0 rgba(0,0,0,.05);--shadow-medium:0 5px 20px 0 rgba(0,0,0,.10);
+ --shadow-strong:0 15px 30px 0 rgba(0,0,0,.20);--shadow-focus:0 0 0 4px rgba(61,99,245,.35);
+ --sunset:linear-gradient(135deg,#0F1F7A 0%,#1832B4 100%);
+ --dusk:linear-gradient(135deg,#0F1F7A 0%,#1429A0 55%,#3D63F5 100%);
+ --container:1200px;--ease:cubic-bezier(0.2,0,0,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Google Sans","Google Sans Text",sans-serif;color:var(--text);background:var(--bg);
+ font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+.overline{font-size:14px;font-weight:700;letter-spacing:.08em;line-height:1;text-transform:uppercase;color:var(--brand-content)}
+.overline.on-dark{color:var(--brand-bright)}
+h1{font-size:84px;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:48px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
+.body-lg{font-size:22px;line-height:1.6;color:var(--text-muted)}
+.body-md{font-size:16px;line-height:1.5;color:var(--text-muted)}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:128px;padding:6px 12px;
+ font-size:12px;font-weight:500;background:var(--brand-light);color:var(--brand-content)}
+.icon{width:24px;height:24px;flex:0 0 24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.topbar{position:sticky;top:0;z-index:50;height:64px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.wordmark{font-size:20px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.wordmark span{color:var(--brand)}
+.brand{display:flex;align-items:center}
+.logo{height:26px;width:auto;display:block}
+@media (max-width:768px){.logo{height:22px}}
+.nav{display:flex;gap:28px}
+.nav a{color:var(--text-muted);font-size:14px;font-weight:500}
+.nav a:hover{color:var(--text)}
+.nav a.active{color:var(--text);font-weight:700}
+section{padding:88px 0}
+.section-head{max-width:820px;margin-bottom:40px}
+.section-head .overline{display:block;margin-bottom:16px}
+.section-head p{margin-top:16px}
+.hero{background:var(--dark-bg);color:#fff;position:relative;overflow:hidden;padding:104px 0}
+.hero::before{content:"";position:absolute;inset:0;background:var(--dusk);opacity:.94}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 28%,rgba(255,255,255,.16),transparent 46%)}
+.hero .wrap{position:relative;z-index:2;max-width:900px}
+.hero h1{margin:18px 0}
+.hero .lede{font-size:22px;line-height:1.6;color:rgba(255,255,255,.92);max-width:680px}
+.prepared{margin-top:20px;font-size:14px;color:rgba(255,255,255,.75)}
+.thesis{background:var(--brand-light)}
+.thesis h2{max-width:920px}.thesis .accent{color:var(--brand)}
+.module{border-top:1px solid var(--border)}
+.module .day-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.module .when{color:var(--text-muted);font-size:16px;font-weight:500}
+.chapters{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.chapter{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-light);transition:box-shadow 200ms var(--ease)}
+.chapter[open]{box-shadow:var(--shadow-strong)}
+.chapter-q{cursor:pointer;list-style:none;background-image:var(--dusk);color:#fff;
+ padding:18px 22px;display:flex;align-items:center;gap:16px;transition:filter 200ms var(--ease)}
+.chapter-q::-webkit-details-marker{display:none}
+.chapter-q:hover{filter:brightness(1.09)}
+.chapter-toggle{flex:0 0 38px;width:38px;height:38px;border-radius:128px;background:rgba(255,255,255,.18);
+ display:flex;align-items:center;justify-content:center;transition:transform 200ms var(--ease),background 200ms var(--ease)}
+.chapter-toggle .icon{stroke:#fff;width:22px;height:22px;stroke-width:2.5}
+.chapter[open] .chapter-toggle{transform:rotate(180deg);background:rgba(255,255,255,.30)}
+.chapter-text{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.chapter-title{font-size:18px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.chapter-point{font-size:14px;font-weight:400;line-height:1.4;color:rgba(255,255,255,.85)}
+.chapter-hint{flex:0 0 auto;font-size:13px;font-weight:500;color:#fff;white-space:nowrap;
+ background:rgba(255,255,255,.16);padding:7px 14px;border-radius:128px}
+.h-open{display:none}
+.chapter[open] .chapter-hint .h-closed{display:none}
+.chapter[open] .chapter-hint .h-open{display:inline}
+.chapter-a{padding:24px 24px 28px;background:#fff}
+@media (max-width:768px){.chapter-hint{display:none}.chapter-title{font-size:16px}}
+/* Script content */
+.script{font-size:16px;line-height:1.6;color:var(--text)}
+.script p{margin:0 0 14px}
+.script strong{font-weight:700}
+.cue{border-radius:12px;padding:12px 16px 12px 14px;margin:0 0 16px;font-size:14px;line-height:1.5}
+.cue-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-right:8px;
+ padding:2px 8px;border-radius:128px;vertical-align:1px}
+.cue-slide{background:var(--bg-subtle);color:var(--grey-500);border-left:3px solid var(--grey-300)}
+.cue-slide .cue-tag{background:var(--grey-200);color:var(--grey-600)}
+.cue-facil{background:var(--orange-light);color:var(--orange-content);border-left:3px solid var(--orange)}
+.cue-facil .cue-tag{background:#fff;color:var(--orange-content)}
+/* Ad-script specifics */
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pill{display:inline-flex;align-items:center;border-radius:128px;padding:5px 12px;font-size:12px;font-weight:600;letter-spacing:.02em}
+.pill-format{background:var(--brand-light);color:var(--brand-content)}
+.pill-shoot{background:var(--orange-light);color:var(--orange-content)}
+.pill-len{background:var(--bg-subtle);color:var(--grey-600)}
+.pill-new{background:#E7F7EF;color:var(--green)}
+.drivers{font-size:14px;color:var(--text-muted);margin:0 0 16px}
+.spoken{font-size:17px;line-height:1.65}
+.spoken .hook{font-weight:700}
+.cta{color:var(--brand-content);font-weight:600}
+.anchor{font-size:13px;color:var(--text-subtle);border-top:1px solid var(--border);margin-top:16px;padding-top:12px}
+.leverbox{background:#fff;border:1px solid var(--border);border-radius:16px;padding:26px;margin-top:8px;box-shadow:var(--shadow-light);max-width:920px}
+.leverbox p{margin:0 0 12px}
+.compliance{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.compliance .pill{background:var(--bg-subtle);color:var(--grey-600)}
+.sources{font-size:14px;line-height:1.6;color:var(--text-muted);max-width:860px}
+.sources li{margin-bottom:8px}
+footer{background:var(--ink);color:#B3B8C1;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer .wordmark{color:#fff;font-size:18px}
+@media (max-width:768px){
+ section{padding:56px 0}.hero{padding:72px 0}
+ h1{font-size:44px}h2{font-size:30px}.hero .lede,.body-lg{font-size:18px}
+ .nav{display:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+ <a href="index.html" class="brand"><img src="mv-wordmark.svg" alt="Mindvalley" class="logo"></a>
+ <nav class="nav">
+   <a href="index.html">Curriculum</a>
+   <a href="index.html#webinar">Webinar</a>
+   <a href="index.html#day1">Day one</a>
+   <a href="index.html#day2">Day two</a>
+   <a href="ad-scripts.html" class="active">Ad Scripts</a>
+ </nav>
+ <span class="badge">Evergreen Ads</span>
+</div></header>
+
+<section class="hero">
+ <div class="wrap">
+   <span class="overline on-dark">Evergreen Ads · Daniel Priestley</span>
+   <h1>10 Evergreen Ad Scripts</h1>
+   <p class="lede">Scroll-stopping scripts that drive traffic to Daniel's free webinar, <em>How to Get More Customers Than You Can Handle</em>. Each is mapped to a Hook Point format and anchored to something Daniel actually said on the live session — so he can read them as his own words.</p>
+   <p class="prepared">Built from Daniel's live webinar transcript · Hook Point Format Engine · shoot-ready (stage, around the event, or organic).</p>
+ </div>
+</section>
+
+<section class="thesis">
+ <div class="wrap">
+   <div class="section-head" style="margin-bottom:0">
+     <span class="overline">The one lever</span>
+     <h2>One perspective shift per ad. Landed in the <span class="accent">first two seconds.</span> Then one clean CTA.</h2>
+   </div>
+   <div class="leverbox">
+     <p>Daniel's webinar hands us ~15 self-contained truth-bombs — each becomes its own ad. The fastest way to make any of these <em>bronze</em> is to stack two ideas in one script. Don't. Every close is the same: <span class="cta">"free class at Mindvalley — link below."</span></p>
+     <p style="margin-bottom:0"><strong>Three tiers, one funnel:</strong> cold scroll-stoppers open with a counter-intuitive shift; value-first ads teach a usable tactic before asking for anything; retargeting + anthem handle objections and carry the brand.</p>
+     <div class="compliance">
+       <span class="pill">Evergreen — no dates, prices, or "live"</span>
+       <span class="pill">CTA everywhere — free class at Mindvalley</span>
+       <span class="pill">No podcast-rank / Apple-store claims</span>
+       <span class="pill">Mechanism — the Oversubscribed Method</span>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- TIER 1 -->
+<section class="module">
+ <div class="wrap">
+   <div class="day-head section-head" style="margin-bottom:8px">
+     <div><span class="overline">Tier 1 · Cold traffic</span><h2 style="margin-top:16px">Scroll-stoppers</h2></div>
+     <span class="when">4 scripts · ~30–40s · one perspective shift each</span>
+   </div>
+   <div class="chapters">
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">1 · Bananas</span><span class="chapter-point">Whiteboard Lessons · Organic · ~30s</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Whiteboard Lessons</span><span class="pill pill-shoot">Organic + simple graphic</span><span class="pill pill-len">~30s</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Hook · Perspective Shift · Work-to-Wow · Generalist Principle</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Direct to camera, seated. Hook must land before the first frame settles. Cut to a simple supply/demand graphic on the banana line.</div>
+<p class="spoken"><span class="hook">"Bad economy, bad business" — wrong.</span> In bad economies, businesses boom. In booming economies, businesses go bust. Your revenue has nothing to do with the news. On day one of an economics degree they show you a slide of bananas. 100 bananas, 1,000 people want them — price goes up, you profit. 100 bananas, 10 buyers — you discount, you lose. Most businesses sit dead in the middle, at equilibrium — and that's where you earn <em>wages</em>, not profit. I've spent 25 years engineering businesses onto the profit side of that line — more customers than they can handle. Five steps. I'll teach you all five, <span class="cta">free, in about an hour. Free class at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: "the only thing that matters is bananas… equilibrium is where you make wages."</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">2 · Airlines vs. Rolex</span><span class="chapter-point">Two Characters, One Lightbulb · Organic / on-stage · ~30s</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Two Characters, One Lightbulb</span><span class="pill pill-shoot">Organic / on-stage</span><span class="pill pill-len">~30s</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Contrast · Perspective Shift · Credibility · Curiosity Gap</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Direct to camera — gesture to wrist / hold a watch. Hook in the first 3 seconds.</div>
+<p class="spoken"><span class="hook">Profit is not handed out fairly.</span> An airline runs one of the hardest businesses on earth — perfect safety, every regulation, passengers furious over a late meal — and makes 3 to 7% margin. Rolex sells a watch that's barely changed in 60 years, from easy-to-source materials, at 70%. The difference isn't difficulty. It isn't even value. Rolex knows how to get <em>oversubscribed</em> — more people lining up than they can serve. Airlines don't. There are five steps to building that line. Step three is the one almost everyone gets backwards. I break down all five, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: Principle 1 — airlines 3–7% vs Rolex 70% margin.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">3 · The Algorithm Just Changed</span><span class="chapter-point">News For You · Organic · ~40s · fresh angle</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">News For You</span><span class="pill pill-shoot">Organic, direct to camera</span><span class="pill pill-len">~40s</span><span class="pill pill-new">New angle</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Drama / Urgency · Viewer Connection · Perspective Shift · Relatability</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Conspiratorial, "let me tell you what just happened" energy. Great as a talking-head with light b-roll of feeds/phones.</div>
+<p class="spoken"><span class="hook">As of this year, social media quietly changed — and it's the best news small businesses have had in a decade.</span> For ten years the algorithm rewarded being sensational — chasing trends, hacking attention. Nobody wants to watch a middle-aged man dancing to a pop song to trick the feed. That era's over. We're now in the <em>semantic</em> era: AI actually watches your content, works out who it's genuinely for, and puts it in front of exactly those people. Which means you no longer need to go viral — you need to be findable by the <em>right</em> person. Getting that person to notice you, understand you, and buy is a five-step method. I teach it <span class="cta">free at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: the "semantic understanding era… no one wants to see a middle-aged man dancing" passage.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">4 · You're Not Bad. You're Invisible.</span><span class="chapter-point">Here's How You Know · Organic · ~30s</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Here's How You Know</span><span class="pill pill-shoot">Organic + phone-scroll b-roll</span><span class="pill pill-len">~30s</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Hook · Relatability · Perspective Shift · Viewer Connection</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Slower, quieter delivery. Cut to someone thumbing a feed as he describes the research.</div>
+<p class="spoken"><span class="hook">Here's something painful, and it's backed by research: people see you for the <em>first</em> time when they see you for the <em>eleventh</em> time.</span> They watched people scroll, then asked "who's this?" Eleven-plus appearances — instant recognition. Fewer than eleven — "…not sure what she does." So if you're brilliant at what you do but the work isn't coming, you're probably not bad. You're invisible. And invisible people don't get bought from — even the brilliant ones. The fix isn't shouting louder. It's a structure that makes the right people notice, understand, and decide. That's the <span class="cta">free class at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: "people see you for the first time when they see you for the 11th time."</p>
+</div></details>
+
+   </div>
+ </div>
+</section>
+
+<!-- TIER 2 -->
+<section class="module" style="background:var(--bg-muted)">
+ <div class="wrap">
+   <div class="day-head section-head" style="margin-bottom:8px">
+     <div><span class="overline">Tier 2 · Value first</span><h2 style="margin-top:16px">Results in advance</h2></div>
+     <span class="when">3 scripts · ~45–75s · teach a real tactic before asking</span>
+   </div>
+   <div class="chapters">
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">5 · Declare Your Capacity</span><span class="chapter-point">Communication Tips · Organic, teaching mode · ~75s</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Communication Tips</span><span class="pill pill-shoot">Organic, teaching mode</span><span class="pill pill-len">~75s</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Providing Value · Actionable Script · Perspective Shift · Credibility</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>On-screen text card: "OFFICIAL CAPACITY". Teaching tone, like he's giving you a move you can use tonight.</div>
+<p class="spoken"><span class="hook">One sentence changes how the market treats you: "I only take on twelve clients a year."</span> Here's how to use it today. Pick the number of clients you can serve where every single one ends up <em>delighted</em> — not just served. A unit of capacity is a unit of delight. Maybe it's twelve. Maybe it's six hundred. Now the uncomfortable bit: say it out loud, in your marketing. Name your bottleneck — onboarding, the way you get the breakthrough, customer success — the reason you <em>can't</em> take everyone even if you wanted to. Why does this work? Because customers don't buy what you want to sell — they buy what <em>other people</em> want to buy. A coach who wants everyone? No pull. A coach with a two-year waiting list? Your first question is "how do I skip the line?" And one rule most people miss: if you can seat 80, market for 100 — because when 20 people get turned away, <em>that's</em> what spreads. Declaring capacity is step one of five. The other four are <span class="cta">free at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: "set your official capacity," "a unit of capacity is a unit of delight," the two-year-waitlist coach, "if you've got 80, market for 100."</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">6 · Signals Before Sales</span><span class="chapter-point">Communication Tips · Organic + festival b-roll · ~75s</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Communication Tips</span><span class="pill pill-shoot">Organic + festival b-roll</span><span class="pill pill-len">~75s</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Providing Value · Storytelling · Curiosity Gap · Credibility</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Cut to festival crowd on "Glastonbury," then a simple waitlist form on "raise a hand."</div>
+<p class="spoken"><span class="hook">Stop selling. You're doing it backwards.</span> First you make your market, <em>then</em> you make your sales. Look at the biggest music festival on earth: for 364 and a half days a year you <em>cannot buy a Glastonbury ticket</em> — you can only register interest. Seven people register for every ticket that exists. Everyone knows it. Then the tickets drop and sell in under an hour. So here's your homework: stop asking strangers to buy. Ask them to raise a hand first — a rolling waitlist, a workshop, a scorecard, an expression of interest. Then be transparent about the tension: "340 registered for 40 places." I did exactly this launching a software company — 5,500 on the waitlist, 1,000 spots, gone in hours, and 4,500 genuinely missed out. But there's a specific <em>ratio</em> of signals to sales you need before you open the doors — get it wrong and the launch flops. I give you the exact ratio, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: Principle 3 (Glastonbury 7:1, rolling waitlist / scorecard / EOI) + the 5,500-person SaaS waitlist.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">7 · Who Actually Pays You</span><span class="chapter-point">Two Characters, One Lightbulb · Organic · ~45s · fresh angle</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Two Characters, One Lightbulb</span><span class="pill pill-shoot">Organic</span><span class="pill pill-len">~45s</span><span class="pill pill-new">New angle</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Contrast · Perspective Shift · Storytelling · Shareability</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>On-screen: three faces / three prices appearing as he names them. The price jump is the visual payoff.</div>
+<p class="spoken"><span class="hook">Same expert. Three different customers. Watch what happens to the price.</span> Esther Perel is a couples therapist. Put her in front of Marty — 33, single — he'll maybe buy a book. Put her in front of Kate — 41, happily married — maybe a course. Now put her in front of Nina — 54, considering a divorce, sixty-million-dollar net worth — and Nina will happily pay a quarter of a million dollars. Same teacher. The difference is <em>who's in the room.</em> You are not underpriced because your work isn't good enough. You're underpriced because you haven't named the one person who'd pay the most for exactly what you do. Naming them is where it starts — and I teach the whole method, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: the Esther Perel / Marty–Kate–Nina example — "connect the dots between your capacity and the person who sees the most value."</p>
+</div></details>
+
+   </div>
+ </div>
+</section>
+
+<!-- TIER 3 -->
+<section class="module">
+ <div class="wrap">
+   <div class="day-head section-head" style="margin-bottom:8px">
+     <div><span class="overline">Tier 3 · Retargeting &amp; anthem</span><h2 style="margin-top:16px">Objections &amp; brand</h2></div>
+     <span class="when">3 scripts · emotional handlers + the long-form anthem</span>
+   </div>
+   <div class="chapters">
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">8 · The Mountain of Value</span><span class="chapter-point">I Would Never (inverted) · Organic, close crop · ~45s · fresh angle</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">I Would Never (inverted)</span><span class="pill pill-shoot">Organic, quieter close crop</span><span class="pill pill-len">~45s</span><span class="pill pill-new">New angle</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Viewer Connection · Relatability · Perspective Shift · Credibility</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Quieter, warmer, closer. This is for the non-converter who thinks "not me." Retargeting audience only.</div>
+<p class="spoken"><span class="hook">If a part of you thinks "this works for other people, but I don't have enough to offer" — this is for you.</span> When you stand on a mountain, you can see every mountain <em>except</em> the one you're standing on. You're too close to your own. And I promise you're standing on a mountain of value you can't see. It doesn't have to be a rocket to Mars. Your value might simply be that you're <em>relatable</em> — that you've had the triumphs and the disasters and come through them. The ice creams are already in the truck. What's missing isn't value — it's the campaign that makes the right people line up for it. I'll show you how to build that, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: "standing on a mountain you can see everything but the mountain," "it's not about impressive, it's about relatable," the ice-cream-truck line.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">9 · You Can't Outwork Intelligence</span><span class="chapter-point">Tips on the Move · Around the event / organic · ~30s · fresh angle</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Tips on the Move</span><span class="pill pill-shoot">Around the event / organic</span><span class="pill pill-len">~30s</span><span class="pill pill-new">New angle</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Hook · Perspective Shift · Credibility · CTA</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Walking-and-talking around the venue works well here — kills the "I'm too busy" objection. Retargeting.</div>
+<p class="spoken"><span class="hook">A couple of days of planning beats two years of hard work.</span> I watch founders grind — more hours, more hustle — convinced they can outwork the problem. You can't outwork intelligence anymore. One day of designing the right campaign will do what two thousand days of grinding never will. I've built seven businesses from zero to a million in twelve months this way — no VC, no private equity, from a standing start. It was never the hours. It was the design. Come learn the design, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: "a couple of days of planning beats 2 years of hard work… you can't outwork intelligence," + his 7-businesses / no-funding record. ⚠️ Clear the "7 businesses zero-to-million" numbers before paid media.</p>
+</div></details>
+
+     <details class="chapter"><summary class="chapter-q"><span class="chapter-toggle"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span><span class="chapter-text"><span class="chapter-title">10 · Chased or Chosen (Anthem)</span><span class="chapter-point">Expert Reacts / long-form brand · On-stage capture · ~2 min</span></span><span class="chapter-hint"><span class="h-closed">Read script</span><span class="h-open">Hide</span></span></summary><div class="chapter-a script">
+<div class="meta"><span class="pill pill-format">Long-form anthem</span><span class="pill pill-shoot">On-stage capture · music from midpoint</span><span class="pill pill-len">~2 min</span></div>
+<p class="drivers"><strong>Key drivers:</strong> Storytelling · Contrast · Credibility · Drama</p>
+<div class="cue cue-facil"><span class="cue-tag">Shoot</span>Unhurried, direct to camera; music enters softly at the midpoint. Cut to a queue outside a restaurant on the "line out front" line. Practically edits itself from accelerator footage.</div>
+<p class="spoken"><span class="hook">Your business either chases — or it chooses.</span> The one that chases: proposals ghosted, discounts cut to close, a good month then three quiet ones. The one that chooses: a waitlist, a set price, the power to select. Same skills. Completely different life. The difference isn't talent — most brilliant founders are obsessed with the supply side, with being of value. And being phenomenal at the supply side will <em>not</em> get you the profit you deserve. Because there's no objective value. A nurse saves lives and isn't paid what she's worth. A watch that hasn't changed in 60 years sells at 70% margin. People pay more when they <em>have</em> to — when they can see others lining up. When there's a line out the restaurant, nobody asks for a discount. When it's half empty, everybody does. I've built oversubscribed businesses for 25 years — my first, at 22, one repeatable week run 43 weeks straight, did 1.3 million; by 25 we'd taken it to 10.7. Not luck. Design. So stop waiting to be chosen. Become the one who chooses. I'll show you exactly how, <span class="cta">free, at Mindvalley — link below.</span></p>
+<p class="anchor">Anchored to: the chasing-vs-choosing frame, the law, nurse + Rolex, the restaurant line, $1.3M-at-22 / 43-week repeatable week / $10.7M-by-25. ⚠️ Clear the revenue figures before paid media.</p>
+</div></details>
+
+   </div>
+ </div>
+</section>
+
+<!-- SHOOT NOTES -->
+<section style="background:var(--bg-muted);padding-top:64px;padding-bottom:72px">
+ <div class="wrap">
+   <div class="section-head" style="margin-bottom:20px">
+     <span class="overline">Shoot notes</span>
+     <h2 style="margin-top:16px;font-size:32px">How to run the day</h2>
+   </div>
+   <ul class="sources">
+     <li><strong>Film first (lowest lift, pure talking-head):</strong> #3 Algorithm, #4 Invisible, #7 Who Pays, #9 Outwork Intelligence — one idea each, no props.</li>
+     <li><strong>Capture on stage / from the event:</strong> #2 Airlines vs Rolex and #10 the anthem — both cut cleanly from accelerator footage.</li>
+     <li><strong>Needs a graphic or b-roll:</strong> #1 Bananas (supply/demand graph), #5 Capacity (text card), #6 Signals (festival crowd + waitlist form), #7 Who Pays (three faces / three prices).</li>
+     <li><strong>Every script ends the same way</strong> — "free class at Mindvalley — link below" — so the destination and CTA never change across the funnel.</li>
+     <li><strong>Before paid media:</strong> clear the "7 businesses zero-to-million" and "$1.3M / $10.7M" revenue figures used in #9 and #10.</li>
+   </ul>
+ </div>
+</section>
+
+<footer><div class="wrap">
+ <div class="wordmark">Mindvalley<span style="color:var(--brand-bright)">.</span></div>
+ <div>Evergreen ad scripts for Daniel Priestley · driving traffic to the free webinar · anchored to the live session transcript</div>
+</div></footer>
+</body>
+</html>
